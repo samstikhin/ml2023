@@ -1,13 +1,10 @@
 import numpy as np
-import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
-from IPython.display import Image
 
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from matplotlib.colors import ListedColormap
 
 def get_grid(data, border=1., step=.01): #получаем все точки плоскости
     x_min, x_max = data[:, 0].min() - border, data[:, 0].max() + border
