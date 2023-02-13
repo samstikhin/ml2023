@@ -1,13 +1,10 @@
 import numpy as np
-import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
-from IPython.display import Image
 
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from matplotlib.colors import ListedColormap
 
 def get_grid(data, border=1., step=.01): #получаем все точки плоскости
     x_min, x_max = data[:, 0].min() - border, data[:, 0].max() + border
@@ -40,10 +37,15 @@ def plot_model(X_train, y_train, clf, title=None, proba=False):
     plt.title(title)
     return clf
 
-def plot_reg(X, y, clf_dtc, X_test):
+def plot_reg(X, y, clf_dtc, X_test, kind='plot'):
     clf_dtc.fit(X, y)
     Y_test = clf_dtc.predict(X_test)
     plt.figure(figsize=(8, 6))
     plt.scatter(X, y, cmap='bwr', s=50, alpha=1)
-    plt.plot(X_test, Y_test, color='r', alpha=1)
+    if kind == 'scatter':
+        plt.scatter(X_test, Y_test, color='r', alpha=.25, s=15)
+    elif kind == 'plot':
+        plt.plot(X_test, Y_test, color='r', alpha=1)
+    else:
+        raise ValueError(f'Can\'t plot "{kind}"')
     plt.grid()
