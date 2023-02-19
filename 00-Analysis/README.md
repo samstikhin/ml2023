@@ -23,7 +23,7 @@
 [Основы Jupyter](https://www.youtube.com/watch?v=s0q2GpcYxo4)
 
 ### Pycharm + Notebooks
-[How to Pycharm + Notebook](https://www.youtube.com/watch?v=1hULfBReZrU)
+[How to Pycharm + Notebook](https://www.youtube.com/watch?v=1hULfBReZrU). Нужна профессиональная лицензия, её можно получить верез сайт JetBrains, если указать почту .*@urfu.me, которая должна быть у всех студентов. Попасть в неё можно зайдя в Outlook через личный кабинет УрФУ. 
 
 ### Dataspell
 Новая IDE для 
