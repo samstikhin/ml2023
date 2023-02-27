@@ -14,6 +14,7 @@ import warnings
 import numpy as np
 warnings.filterwarnings('ignore')
 from matplotlib import pyplot as plt
+from matplotlib import patches as p
 plt.style.use('ggplot')
 plt.rcParams['figure.figsize'] = 10, 6
 import seaborn as sns
@@ -49,7 +50,7 @@ def plot_model(X_train, y_train, clf, title=None, proba=False):
     colors = ['purple', 'yellow', 'orange']
     patches = []
     for yi in np.unique(y_train):
-        patches.append(mpatches.Patch(color=colors[int(yi)], label='$y_{pred}=$'+str(int(yi))))
+        patches.append(p.Patch(color=colors[int(yi)], label='$y_{pred}=$'+str(int(yi))))
     ax.legend(handles=patches)
     plt.title(title)
     return clf
